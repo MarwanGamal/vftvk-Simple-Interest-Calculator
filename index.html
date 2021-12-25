@@ -1,16 +1,39 @@
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+  <head>
+    <h1>
+      simple intrest calculator
+    </h1>
+  </head>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+  <body>
+    <form id="simpleInterset" >
+      <label>Amount</label>
+      <input type="number" name="amount" id="amount" min=0 onChange="change()"> <br> <br>
+      <label>Intrest rate</label>
+      <input type="range" name="IntrestRate" id="intrestRate" min=1 max=15 value=7 >
+      <output for="range" id="bubble">7%</output>
+      <br> <br>
+      <label for="numbers">Number of years</label>
+      <select name="NoYears" id="NoYears" onChange="change()">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+      <br> <br>
+
+    </form>
+    <div>
+      <button type="button" id="submit" onclick="myFunction">Compute Interset</button>
+    </div> <br>
+    <div>
+      <output id="deposit"> </output><br>
+      <output id="rate"></output><br>
+      <output id="recive"></output><br>
+      <output id="year"></output><br>
+    </div>
+  </body>
+
 </html>

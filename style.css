@@ -1,19 +1,20 @@
 body {
   background-color: black;
+  font-family: arial;
 
   color: white;
 }
 
 h1 {
   color: grey;
-
+  font-family: vendara;
 }
 
 .maindiv {
   background-color: white;
   border-radius: 25px;
   width: 300px;
- margin: auto;
- color: black;
-padding: 20px;
+  margin: auto;
+  color: black;
+  padding: 20px;
 }

@@ -17,7 +17,7 @@
       interest = principal * years * rate / 100;
       year = new Date().getFullYear() + parseInt(years);
 
-      if (principal == "") {
+      if (principal <= 0) {
         alert("Please enter a positive number");
         principal.focus();
       } else {

@@ -1,33 +1,19 @@
 body {
+  background-color: black;
 
-  text-align: left;
-  margin-left: 700px;
-  font-size: large;
-  margin-top: 50px;
-  font-family: arial;
+  color: white;
 }
 
 h1 {
   color: grey;
-  font-size: 50px;
+
 }
 
-label {
-
-  color: black;
-  width: 200px;
-  float: left;
-  margin-left: 40px;
+.maindiv {
+  background-color: white;
+  border-radius: 25px;
+  width: 300px;
+ margin: auto;
+ color: black;
+padding: 20px;
 }
-button {
-  margin-left: 40px;
-  
-}
-output{
-  margin-left: 40px;
-}
-input{
-  float: left;
-}
-
-

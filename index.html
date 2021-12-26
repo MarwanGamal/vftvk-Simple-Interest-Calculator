@@ -1,41 +1,42 @@
 <html>
 
   <head>
-    <h1>
-      simple intrest calculator
-    </h1>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-     <link rel="stylesheet" href="style.css"type="text/css">
-    <form id="simpleInterset" >
-      <label>Amount</label>
-      <input type="number" name="amount" id="amount" min=0 onChange="change()"> <br> <br>
-      <label>Intrest rate</label>
-      <input type="range" name="IntrestRate" id="intrestRate" min=1 max=15 value=7 >
-      <output for="range" id="bubble">7%</output>
-      <br> <br>
-      <label for="numbers">Number of years</label>
-      <select name="NoYears" id="NoYears" onChange="change()">
-        <option value=1>1</option>
-        <option value=2>2</option>
-        <option value=3>3</option>
-        <option value=4>4</option>
-        <option value=5>5</option>
-      </select>
-      <br> <br>
+    <div class="maindiv">
+      <title>Any relevant title you want to give</title>
+      <h1>Simple Interest Calculator</h1>
 
-    </form>
-    <div>
-      <button type="button" id="submit" onclick="myFunction">Compute Interset</button>
-    </div> <br>
-    <div>
-      <output id="deposit"> </output><br>
-      <output id="rate"></output><br>
-      <output id="recive"></output><br>
-      <output id="year"></output><br>
+      Amount <input type="number" id="principal" min="0" > <br />
+      Interest Rate <input type="range" id="rate" min="1" max="20" value="10.25" step=".25" onChange="updateRate()">
+      <span id="rate_val">10.25%
+      </span><br />
+      No. of Years <select id="years">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select> <br />
+
+
+      <button onclick="compute()">Compute Interest</button> <br />
+      <span id="result"></span><br>
     </div>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
+  <footer>
+
+    &#169; This Calculator belongs to Marwan
+
+
+  </footer>
 
 </html>

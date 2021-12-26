@@ -1,38 +1,26 @@
-var range = document.getElementById("intrestRate");
-var bubble = document.getElementById("bubble");
-var A = range.value;
-var amount = document.getElementById("amount");
+    var principal = document.getElementById("principal").value;
+    var rate = document.getElementById("rate").value;
+    var years = document.getElementById("years").value;
+    var interest = principal * years * rate / 100;
+    var year = new Date().getFullYear() + parseInt(years);
 
-range.addEventListener("input", () => {
-  setBubble(range, bubble);
-});
+    function updateRate() {
+      var rateval = document.getElementById("rate").value;
+      document.getElementById("rate_val").innerText = rateval + "%";
 
+    }
 
-function setBubble(range, bubble) {
-  A = range.value;
-  bubble.innerHTML = A + "%";
-}
+    function compute() {
+      principal = document.getElementById("principal").value;
+      rate = document.getElementById("rate").value;
+      years = document.getElementById("years").value;
+      interest = principal * years * rate / 100;
+      year = new Date().getFullYear() + parseInt(years);
 
-var select = document.getElementById('NoYears');
-var option = select.options[select.selectedIndex].value;
-
-function change() {
-  select = document.getElementById('NoYears');
-  option = select.options[select.selectedIndex].value;
-  amount = document.getElementById("amount")
-}
-
-var button = document.getElementById("submit");
-button.onclick = function myFunction() {
-if(amount.value==""){
-alert("Please enter a number");
-amount.focus();
-}
-else{
-  document.getElementById("deposit").value = "If you deposit " + amount.value;
-  document.getElementById("rate").value = "At intrest rate of " + A + "%";
-  document.getElementById("recive").value = "You recive an amount of " + ((parseInt(amount.value) * parseInt(A) / 100 * option) + parseInt(amount.value));
-  document.getElementById("year").value = "in the year " + (parseInt(option) + 2021);
-  }
-
-}
+      if (principal == "") {
+        alert("Please enter a positive number");
+        principal.focus();
+      } else {
+        document.getElementById("result").innerHTML = "If you deposit " + principal + ",\<br\>at an interest rate of " + rate + "%\<br\>You will receive an amount of " + interest + ",\<br\>in the year " + year + "\<br\>"
+      }
+    }
